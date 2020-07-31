@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="inside">
+           
+           <img src="image/nepal.png" alt="nepalflag" height="30px" width="35px"/>CORONA NEPAL   <img src="image/nepal.png" alt="nepalflag" height="30px" width="35px"/>   
+                
+        </div>
+    </center>
+    <div class="inside1">
+        <p class="textmain">TOTAL CASES</p><br>
+        <p id="totalcase" class="textdata"></p>
+        <hr/>
+    
+        <p class="textmain">DEATHS</p><br>
+        <p id="death" class="textdata"></p>
+  <hr/>
+     
+        <p class="textmain">PEOPLE IN ISOLATION</p><br>
+        <p id="isolation" class="textdata"></p>
+
+     <hr/>  
+        <p class="textmain">RECOVERED</p><br>
+        <p id="recover" class="textdata"></p>
+
+       <hr/>
+        <p class="textmain">ACTIVE CASES</p><br>
+        <p id="active" class="textdata"></p>
+
+       <hr/>
+        <p class="textmain">PCR TEST</p><br>
+        <p id="pcr" class="textdata"></p>
+
+      <hr/>
+        <p class="textmain">RDT TEST</p><br>
+        <p id="rdt" class="textdata"></p>
+
+       <hr/>
+        <p class="textmain">TOTAL TEST</p><br>
+        <p id="test" class="textdata"></p>
+  <hr/>
+             
+        <p class="textmain">TIME OF UPDATE</p><br>
+        <p id="next" class="textdata"></p>    </div>
+        
+        <br>
+        
+
+    <div class="inside2">
+
+        <p class="textmain"><b>Tips And Advice</b></p><hr/>
+        <ul>
+            <li class="textmain"><i> *Sneeze or cough? Cover your nose and mouth with a tissue or use your elbow. </li><br><br>
+            <li class="textmain">*Wash your hands often with soap and water for at least 20 seconds.</li><br><br>
+            <li class="textmain"> *Clean and disinfect surfaces around your home and work frequently.</li><br><br>
+            <li class="textmain"> *Keep at least 6 feet between yourself and others if you must be in public.</li><br><br>
+            <li class="textmain"> *Wear a cloth face covering over your mouth and nose when around others. </li></i><br>
+        </ul>
+
+    </div>
+<hr/>
+  <h2>Copyright &copy 2020.All rights reserved.<br>50bit</p>
+    <script>
+        const api = 'https://nepalcorona.info/api/v1/data/nepal';
+        async function getdata() {
+            const repsond = await fetch(api);
+            const data = await repsond.json();
+            document.getElementById("totalcase").innerHTML = data.tested_positive;
+            document.getElementById("death").innerHTML = data.deaths;
+            document.getElementById("isolation").innerHTML = data.in_isolation;
+            document.getElementById("recover").innerHTML = data.recovered;
+            document.getElementById("active").innerHTML = data.tested_positive - data.recovered;
+            document.getElementById("test").innerHTML = data.tested_total;
+            document.getElementById("next").innerHTML = data.updated_at;
+            document.getElementById("rdt").innerHTML = data.tested_rdt;
+            document.getElementById("pcr").innerHTML = data.tested_total - data.tested_rdt;
+            //console.log(data);
+
+        }
+        getdata();
+    </script>
+</body>
+
+</html>

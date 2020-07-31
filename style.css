@@ -1,0 +1,62 @@
+body {
+      
+           background: rgb(245, 246, 247);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        img {
+            display: inline;
+        }
+        
+        .textmain {
+            display: inline;
+            font-size: 25px;
+            color: rgb(57, 128, 128);
+        }
+        
+        .inside {
+            padding: 20px 20px;
+            background-color:black;
+            color:white;
+            font-size:28px;
+            box-shadow: inset 4px 4px 6px -1px rgba(49,69,106,0.2),inset -4px -4px 6px 1px rgba(255,255,255, .7),-0.5px -0.5px 0 rgba(255,255,255,1),0.5px 0.5px 0 rgba(0,0,0,.15),0px 12px 120px -10px rgba(0,0,0,0.05);
+            animation: clickedIn .2s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            border-radius: 20px;
+            margin: 20px 0px;
+        }
+        
+         .inside1 {
+            padding: 20px 20px;
+          background-color:#caccbf96;
+          font-size:40px;
+          text-decoration:center;
+          text-align:center;
+            border-radius: 20px;
+            margin-left:10%;
+            margin-right:10%;
+            margin: 40px 0px;
+            color: rgb(252, 253, 254);
+            border: 1px solid rgba(0,0,0,0.0);
+            box-shadow: inset 4px 4px 6px -1px rgba(49,69,106,0.2),inset -4px -4px 6px 1px rgba(255,255,255, .7),-0.5px -0.5px 0 rgba(255,255,255,1),0.5px 0.5px 0 rgba(0,0,0,.15),0px 12px 120px -10px rgba(0,0,0,0.05);
+            animation: clickedIn .2s cubic-bezier(0.165, 0.84, 0.44, 1); 
+        }
+
+         .inside2 {
+                 padding:20px 20px;
+            color: rgb(49,69,106);
+            border: 1px solid rgba(0,0,0,0.0);
+            box-shadow: inset 4px 4px 6px -1px rgba(49,69,106,0.2),inset -4px -4px 6px 1px rgba(255,255,255, .7),-0.5px -0.5px 0 rgba(255,255,255,1), 0.5px 0.5px 0 rgba(0,0,0,.15), 0px 12px 120px -10px rgba(0,0,0,0.05);
+            animation: clickedIn .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        
+        .textdata {
+            display: inline;
+            font-size: 25px;
+            color: rgb(104, 230, 20);
+        }
+        h2{
+                text-align:center;
+                color:black;
+                font-size:small;
+        }
